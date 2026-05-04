@@ -2,14 +2,96 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt</title>
+    <title>Kontakt - Formularz</title>
 </head>
 <body>
-    <h1>Skontaktuj się ze mną</h1>
-    <p>Możesz mnie znaleźć na GitHubie lub napisać maila.</p>
-    
-    <nav>
-        <a href="index.html">Powrót do strony głównej</a>
-    </nav>
+
+    <header>
+        <h1>Formularz kontaktowy</h1>
+        <nav>
+            <a href="index.html">Powrót do strony głównej</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Zostaw swoje dane</h2>
+            <p>Wypełnij ankietę, aby przetestować walidację HTML5.</p>
+
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Imię i nazwisko:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Jan Kowalski" required>
+                </div><br>
+
+                <div>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="przyklad@poczta.pl" required>
+                </div><br>
+
+                <div>
+                    <label for="phone">Numer telefonu:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="123456789" pattern="[0-9]{9}" title="Wpisz 9 cyfr bez spacji">
+                </div><br>
+
+                <div>
+                    <label for="birthdate">Data urodzenia:</label><br>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div><br>
+
+                <div>
+                    <label for="color">Ulubiony kolor:</label><br>
+                    <input type="color" id="color" name="color">
+                </div><br>
+
+                <div>
+                    <label for="age">Wiek (13-100):</label><br>
+                    <input type="number" id="age" name="age" min="13" max="100">
+                </div><br>
+
+                <div>
+                    <label>Płeć:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Mężczyzna</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Kobieta</label>
+                </div><br>
+
+                <div>
+                    <label>Zainteresowania:</label><br>
+                    <input type="checkbox" id="it" name="hobby" value="it">
+                    <label for="it">Informatyka</label><br>
+                    <input type="checkbox" id="sports" name="hobby" value="sports">
+                    <label for="sports">Sport</label><br>
+                    <input type="checkbox" id="music" name="hobby" value="music">
+                    <label for="music">Muzyka</label><br>
+                    <input type="checkbox" id="travel" name="hobby" value="travel">
+                    <label for="travel">Podróże</label>
+                </div><br>
+
+                <div>
+                    <label for="country">Kraj:</label><br>
+                    <select id="country" name="country">
+                        <option value="pl">Polska</option>
+                        <option value="de">Niemcy</option>
+                        <option value="uk">Wielka Brytania</option>
+                        <option value="us">USA</option>
+                    </select>
+                </div><br>
+
+                <div>
+                    <label for="message">Wiadomość:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="30" placeholder="Wpisz treść wiadomości..."></textarea>
+                </div><br>
+
+                <button type="submit">Wyślij formularz</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Praktyki - Formularze HTML5</p>
+    </footer>
+
 </body>
 </html>
